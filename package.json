@@ -1,0 +1,25 @@
+{
+  "name": "kimmotherbot",
+  "version": "1.0.0",
+  "description": "telegram bot",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "node-telegram-bot-api": "^0.23.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://lowjiansheng@github.com/lowjiansheng/kimmotherbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lowjiansheng/kimmotherbot/issues"
+  },
+  "homepage": "https://github.com/lowjiansheng/kimmotherbot#readme"
+}

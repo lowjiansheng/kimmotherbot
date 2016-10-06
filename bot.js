@@ -5,6 +5,11 @@ var token = '291482532:AAEkKodHdD8E_tos79TlSbsW1y2ymkkaiek';
 var bot = new TelegramBot(token, {polling:{interval:200}});
 
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://kimmotherbot.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 // Kim's reply when you ask who is he
 bot.onText(/\/whoiskim/, function (msg, match) {
     var fromId = msg.chat.id;

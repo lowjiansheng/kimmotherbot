@@ -63,7 +63,7 @@ bot.onText(/\/kimopen (.+)/, function (msg, match){
 });
 
 bot.onText(/\/kimopentmr/, function (msg, match){
-   var fromId = msg.from.id;
+   var fromId = msg.chat.id;
     var day = new Date();
     var today = day.getDay();
     var message;
@@ -81,7 +81,7 @@ bot.onText(/\/kimopentmr/, function (msg, match){
 });
 
 bot.onText(/\/kimopentoday/, function (msg, match){
-   var fromId = msg.from.id;
+   var fromId = msg.chat.id;
     var day = new Date();
     var today = day.getDay();
     var message;

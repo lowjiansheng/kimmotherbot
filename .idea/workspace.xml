@@ -49,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/bot.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
-              <caret line="100" column="105" selection-start-line="100" selection-start-column="105" selection-end-line="100" selection-end-column="105" />
+              <caret line="100" column="112" selection-start-line="100" selection-start-column="112" selection-end-line="100" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -263,12 +263,12 @@
       <workItem from="1475759608706" duration="1378000" />
       <workItem from="1475762126300" duration="979000" />
       <workItem from="1475764523111" duration="2253000" />
-      <workItem from="1475767643980" duration="802000" />
+      <workItem from="1475767643980" duration="857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10077000" />
+    <option name="totallyTimeSpent" value="10132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="157" y="27" width="982" height="671" extended-state="0" />
@@ -434,7 +434,7 @@
     <entry file="file://$PROJECT_DIR$/bot.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
-          <caret line="100" column="105" selection-start-line="100" selection-start-column="105" selection-end-line="100" selection-end-column="105" />
+          <caret line="100" column="112" selection-start-line="100" selection-start-column="112" selection-end-line="100" selection-end-column="112" />
           <folding />
         </state>
       </provider>

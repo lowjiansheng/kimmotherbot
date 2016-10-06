@@ -102,6 +102,6 @@ bot.onText(/\/kimentertainme/, function(msg,match){
 
     var chosenMessage = message[Math.floor(Math.random() * message.length)];
 
-    bot.sendMessage(fromId, message);
+    bot.sendMessage(fromId, chosenMessage);
 
 });

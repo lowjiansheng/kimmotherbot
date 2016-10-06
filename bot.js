@@ -7,7 +7,7 @@ var bot = new TelegramBot(token, {polling:{interval:200}});
 
 // Kim's reply when you ask who is he
 bot.onText(/\/whoiskim/, function (msg, match) {
-    var fromId = msg.from.hat.id;
+    var fromId = msg.from.chat.id;
 
     var kimReply = "Hi I am Kim and I have a dig bick.";
 

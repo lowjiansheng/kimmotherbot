@@ -3,12 +3,14 @@ var TelegramBot = require('node-telegram-bot-api');
 var token = '291482532:AAEkKodHdD8E_tos79TlSbsW1y2ymkkaiek';
 var web = "kimmotherbot.herokuapp.com";
 
-var port = process.env.PORT || 8443;
-var host = process.env.HOST;
 
-// Setup polling way
-var bot = new TelegramBot(token, {polling: true, webHook: {port: port, host: host}});
+var port = process.env.PORT || 443;
+var host = '0.0.0.0';  // probably this change is not required
+var externalUrl = process.env.CUSTOM_ENV_VARIABLE || 'https://my-app.herokuapp.com';
 
+var bot = new TelegramBot(token, { webHook: { port : port, host : host } });
+
+bot.setWebHook(externalUrl + ':443/bot' + token);
 
 // Kim's reply when you ask who is he
 bot.onText(/\/whoiskim/, function (msg, match) {

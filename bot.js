@@ -20,7 +20,7 @@ bot.onText(/\/kimopen (.+)/, function (msg, match){
     var dayToSearch = match[1];
     var open;
     var openMessage = "The shop is open on " + dayToSearch +" ! Come come enjoy.";
-    var closeMessage = "My Mom's shop does not open on Tuesday? How many times must I tell you? Is it so hard to remember?"
+    var closeMessage = "My Mom's shop does not open on Tuesday? How many times must I tell you? Is it so hard to remember?";
     var stupidMessage = null;
 
     switch (dayToSearch){
@@ -55,7 +55,7 @@ bot.onText(/\/kimopen (.+)/, function (msg, match){
     else if (open){
         bot.sendMessage(fromId, openMessage);
     }
-    else {
+    else if (!open){
         bot.sendMessage(fromId, closeMessage);
     }
 

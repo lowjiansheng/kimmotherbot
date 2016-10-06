@@ -6,7 +6,7 @@ var bot = new TelegramBot(token, {polling: true});
 
 
 // Any kind of message
-bot.on('message', function (msg) {
+bot.onText('message', function (msg) {
     var chatId = msg.chat.id;
     bot.sendMessage(chatId, "hi");
 });

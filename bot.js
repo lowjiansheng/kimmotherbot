@@ -1,8 +1,10 @@
 var TelegramBot = require('node-telegram-bot-api');
 
 var token = '291482532:AAEkKodHdD8E_tos79TlSbsW1y2ymkkaiek';
+var web = "kimmotherbot.herokuapp.com";
+
 // Setup polling way
-var bot = new TelegramBot(token, {polling: true});
+var bot = new TelegramBot(token, {polling: true, webHook: web});
 
 
 // Kim's reply when you ask who is he

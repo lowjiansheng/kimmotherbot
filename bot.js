@@ -98,7 +98,7 @@ bot.onText(/\/kimopentoday/, function (msg, match){
 
 bot.onText(/\/kimentertainme/, function(msg,match){
     var fromId = msg.chat.id;
-    var message = ["I have a digger bick than you.", "I do wushu.", "Lemon."];
+    var message = ["I have a digger bick than you.", "I do wushu.", "Lemon.", "lemonlemonlemonlemonlemon"];
 
     var chosenMessage = message[Math.floor(Math.random() * message.length)];
 

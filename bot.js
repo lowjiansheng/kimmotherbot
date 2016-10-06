@@ -8,5 +8,5 @@ var bot = new TelegramBot(token, {polling: true});
 // Any kind of message
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
-    bot.sendPhoto(chatId, "hi");
+    bot.sendMessage(chatId, "hi");
 });

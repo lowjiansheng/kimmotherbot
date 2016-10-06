@@ -1,8 +1,6 @@
 var TelegramBot = require('node-telegram-bot-api');
 
 var token = '291482532:AAEkKodHdD8E_tos79TlSbsW1y2ymkkaiek';
-var web = "kimmotherbot.herokuapp.com";
-
 
 var port = process.env.PORT || 443;
 var host = '0.0.0.0';  // probably this change is not required

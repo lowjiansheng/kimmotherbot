@@ -7,7 +7,7 @@ var bot = new TelegramBot(token, {polling:{interval:200}});
 
 // Kim's reply when you ask who is he
 bot.onText(/\/whoiskim/, function (msg, match) {
-    var fromId = msg.from.id;
+    var fromId = msg.from.chat_id;
 
     var kimReply = "Hi I am Kim and I have a dig bick.";
 
@@ -16,7 +16,7 @@ bot.onText(/\/whoiskim/, function (msg, match) {
 });
 
 bot.onText(/\/kimopen (.+)/, function (msg, match){
-   var fromId = msg.from.id;
+   var fromId = msg.from.chat_id;
     var dayToSearch = match[1];
     var open;
     var openMessage = "The shop is open on " + dayToSearch +" ! Come come enjoy.";

@@ -2,7 +2,7 @@ var TelegramBot = require('node-telegram-bot-api');
 
 var token = '291482532:AAEkKodHdD8E_tos79TlSbsW1y2ymkkaiek';
 
-var bot = new TelegramBot(token, {polling:true});
+var bot = new TelegramBot(token, {polling:{interval:200}});
 
 
 // Kim's reply when you ask who is he

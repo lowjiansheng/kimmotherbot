@@ -6,7 +6,7 @@ var web = "kimmotherbot.herokuapp.com";
 
 var port = process.env.PORT || 443;
 var host = '0.0.0.0';  // probably this change is not required
-var externalUrl = process.env.CUSTOM_ENV_VARIABLE || 'https://my-app.herokuapp.com';
+var externalUrl = process.env.CUSTOM_ENV_VARIABLE || 'https://kimmotherbot.herokuapp.com';
 
 var bot = new TelegramBot(token, { webHook: { port : port, host : host } });
 

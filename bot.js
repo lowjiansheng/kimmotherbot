@@ -85,6 +85,14 @@ bot.onText(/\/kimopentmr/, function (msg, match){
 
 });
 
+bot.onText(/\/marcussuspended/, function (msg, match){
+    var fromId = msg.chat.id;
+    var message = "That's why he's so free to wish us all the best";
+
+    bot.sendMessage(fromId, message);
+
+})
+
 bot.onText(/\/kimopentoday/, function (msg, match){
    var fromId = msg.chat.id;
     var day = new Date();

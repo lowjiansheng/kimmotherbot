@@ -8,7 +8,7 @@ var bot = new TelegramBot(token, {polling:{interval:200}});
 var http = require("http");
 setInterval(function() {
     http.get("http://kimmotherbot.herokuapp.com");
-}, 300000); // every 5 minutes (300000)
+}, 30000); // every 5 minutes (300000)
 
 // Kim's reply when you ask who is he
 bot.onText(/\/whoiskim/, function (msg, match) {
@@ -24,35 +24,56 @@ bot.onText(/\/kimopen (.+)/, function (msg, match){
    var fromId = msg.chat.id;
     var dayToSearch = match[1];
     var open;
-    var openMessage = "The shop is open on " + dayToSearch +" ! Come come enjoy.";
+    var openingHours;
+    var closingHours;
     var closeMessage = "My Mom's shop does not open on Tuesday? How many times must I tell you? Is it so hard to remember?";
     var stupidMessage = null;
+    var WEEK_OPENING = 10;
+    var WEEKEND_CLOSING = 19;
+    var WEEKDAY_CLOSING = 20;
+
+    openingHours = WEEK_OPENING;
 
     switch (dayToSearch){
         case "monday" :
             open = true;
+            closingHours = WEEKDAY_CLOSING;
+
             break;
         case "tuesday" :
             open = false;
             break;
         case "wednesday" :
             open = true;
+            closingHours = WEEKDAY_CLOSING;
             break;
         case "thursday" :
             open = true;
+            closingHours = WEEKDAY_CLOSING;
             break;
         case "friday" :
             open = true;
+            closingHours = WEEKDAY_CLOSING;
             break;
         case "saturday" :
             open = true;
+            closingHours = WEEKEND_CLOSING;
             break;
         case "sunday" :
             open = true;
+            closingHours = WEEKEND_CLOSING;
             break;
         default :
             stupidMessage = "Wtf you don't know how to type in days?";
     }
+
+    var openingHourDate = new Date();
+    openingHourDate.setHours(openingHours);
+    var closingHourDate = new Date();
+    closingHourDate.setHours(closingHours);
+
+    var openMessage = "The shop is open on " + dayToSearch;
+
     if (stupidMessage != null){
         bot.sendMessage(fromId, stupidMessage);
     }
